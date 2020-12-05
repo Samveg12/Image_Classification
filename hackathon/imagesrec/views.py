@@ -12,29 +12,31 @@ def backend(request):
 
 def single(request):
     if request.method == "POST":
+        print("(**********")
+        print("Hi")
+        print("*******")
         form = img(request.POST, request.FILES)
         if form.is_valid():
             object = form.save(commit=False)
-            object.user = myuser
-            object.save()
 
             messages.success(request, "Your entry has been noted")
             return redirect("/backend")
         else:
-            messages.success(request, "Sorry wrong")
+            print("(**********")
+            print("Hi")
+            print("*******")
             return redirect("/")
 
 
     else:
         form = img()
+        print("uuuuuuuuu")
         return render(request, 'single.html', {"form": form})
 def bulk(request):
     if request.method == "POST":
         form = img(request.POST, request.FILES)
         if form.is_valid():
             object = form.save(commit=False)
-            object.user = myuser
-            object.save()
 
             messages.success(request, "Your entry has been noted")
             return redirect("/backend")
@@ -51,8 +53,7 @@ def video(request):
         form = img(request.POST, request.FILES)
         if form.is_valid():
             object = form.save(commit=False)
-            object.user = myuser
-            object.save()
+
 
             messages.success(request, "Your entry has been noted")
             return redirect("/backend")
