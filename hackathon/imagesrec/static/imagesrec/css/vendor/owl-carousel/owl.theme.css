@@ -1,0 +1,73 @@
+/*========================================== DOTS INDICATOR ===========================================*/
+.owl-carousel .owl-item img {
+    display: block;
+    transform-style: preserve-3d;
+    width: auto;
+}
+
+.owl-dots .owl-dot{
+	display:inline-block;
+	width: 12px;
+	height: 12px;
+	margin: 0 7px;
+	filter: Alpha(Opacity=50);/*IE7 fix*/
+	opacity: 0.5;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+.owl-dots .owl-dot.active {
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 1;
+}
+/*========================================== DOTS INDICATOR ===========================================*/
+
+/*========================================== ARROW INDICATOR ===========================================*/
+.owl-carousel .owl-dot, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-nav .owl-prev {
+    -moz-user-select: none;
+    cursor: pointer;
+}
+.owl-carousel .owl-prev {
+    left: 0;
+}
+.owl-carousel .owl-next, .owl-carousel .owl-prev {
+    background-color: rgba(225, 81, 66, 0.7);
+    border-radius: 0;
+    color: #ffffff;
+    font-size: 20px;
+    height: 50px;
+    line-height: 50px;
+    position: absolute;
+    text-align: center;
+    top: 42%;
+    width: 50px;
+}
+
+
+.owl-carousel .owl-next {
+    right: 0;
+}
+/*========================================== ARROW INDICATOR ===========================================*/
+
+/*========================================== HEADER-SLIDER ===========================================*/
+#header-slider .owl-dots .owl-dot{background-color:#ec3642;}
+#header-slider .owl-dots{
+	padding-top:20px;
+	text-align: center;
+	position:absolute;
+	left:0;
+	right:0;
+	bottom:50px;
+}
+/*========================================== HEADER-SLIDER ===========================================*/
+
+/*========================================== THREE-COLUMN ===========================================*/
+#owl-demo2 .owl-dots .owl-dot{background-color:#ec3642;}
+#owl-demo2 .owl-dots{
+	padding-top:20px;
+	text-align: center;
+	position:relative;
+	left:0;
+	right:0;
+}
+/*========================================== THREE-COLUMN ===========================================*/

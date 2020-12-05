@@ -20,5 +20,9 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name="index"),
+    path('backend',views.backend, name="backend"),
+    path('single',views.single, name="single"),
+    path('bulk',views.bulk, name="bulk"),
+    path('video',views.video, name="video")
     
 ]

@@ -53,7 +53,7 @@
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right no-margin" id="menu-list">
-                        <li class="menu-fs menu-underline"><a href="" class="pagescroll">HOME</a>
+                        <li class="menu-fs menu-underline"><a href="/" class="pagescroll">HOME</a>
                         </li>
                         <li class="menu-fs menu-underline"><a href="/bulk" class="pagescroll">Images in bulk</a>
                         </li>
@@ -83,7 +83,25 @@
                         </div>
                     </div>
 
-                    
+                    <div class="col-md-5 col-sm-6">
+                        <div class="contact-div header-contact-form header-contact-bg">
+                            <form class="contact-form" action="/single" method="POST">{% csrf_token %}
+                                <div class="clearfix">
+                                    <div class="header-form-heading-bg">
+                                        <h4 class="center">UPLOAD IMAGES IN BULK</h4>
+                                    </div>
+                                    <div class="header-contact-bg-pad">
+                                        {{form.as_p}}
+
+                                    <!--================= SUBMIT BUTTON HERE ====================-->
+                                    <div style='padding-top:40px;'>
+                                        <input type="submit" class="submit-btn contact-form-submit" name="submit" value="REGISTER NOW">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
 
                 </div>
             </div>

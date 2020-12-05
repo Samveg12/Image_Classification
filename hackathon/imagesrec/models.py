@@ -1,3 +1,5 @@
 from django.db import models
 
-# Create your models here.
+class otherDetails(models.Model):
+    image=models.FileField(blank=True,upload_to='imagesrec/images')
+    
