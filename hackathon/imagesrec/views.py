@@ -17,21 +17,25 @@ def backend(request):
 
 def bulk(request):
     if request.method == "POST":
-        form = img(request.POST, request.FILES)
-        if form.is_valid():
-            object = form.save(commit=False)
-            object.save()
+        # form = img(request.POST, request.FILES)
+        # if form.is_valid():
+        #     object = form.save(commit=False)
+        #     object.save()
 
-            messages.success(request, "Your entry has been noted")
-            return redirect("/backend")
-        else:
-            messages.success(request, "Sorry wrong")
-            return redirect("/")
+        #     messages.success(request, "Your entry has been noted")
+        #     return redirect("/backend")
+        # else:
+        #     messages.success(request, "Sorry wrong")
+        #     return redirect("/")
+        my_file = request.FILES.get("file")
+        otherDetails.objects.create(image = my_file)
+        return redirect("/backend")
+
 
 
     else:
         form = img()
-        return render(request, 'bulk.html', {"form": form})
+        return render(request, 'bulk.html')
 def video(request):
     if request.method == "POST":
         form = img(request.POST, request.FILES)

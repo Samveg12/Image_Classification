@@ -25,6 +25,11 @@
 
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'imagesrec/css/custom/style.css'  %}">
+    <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
+    <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'imagesrec/css/style' %}">
+     <script src="{% static 'imagesrec/js/main.js' %}"></script>
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -84,21 +89,25 @@
 
                     <div class="col-md-5 col-sm-6">
                         <div class="contact-div header-contact-form header-contact-bg">
-                            <form action="/bulk" enctype= "multipart/form-data" method="POST">{% csrf_token %}
-                                <div class="clearfix">
+<!--                             <form action="/bulk" enctype= "multipart/form-data" id="my-dropzone" method="POST">{% csrf_token %}
+ -->                                <div class="clearfix">
                                     <div class="header-form-heading-bg">
                                         <h4 class="center">UPLOAD IMAGES IN BULK</h4>
                                     </div>
                                     <div class="header-contact-bg-pad">
-                                        {{form.as_p}}
-
+                                         <form action="/bulk" method="POST" class="dropzone dz" id="my-dropzone">
+                                            {% csrf_token %}
+                                          <div class="fallback">
+                                            <input name="file" type="file" multiple />
+                                          </div>
+                                        </form>
                                     <!--================= SUBMIT BUTTON HERE ====================-->
-                                    <div style='padding-top:40px;'>
-                                        <input type="submit" class="submit-btn contact-form-submit" name="submit" value="REGISTER NOW">
-                                    </div>
+                                 <!--    <div style='padding-top:40px;'>
+                                        <input type="submit" class="submit-btn contact-form-submit" name="submit" value="submit">
+                                    </div> -->
                                 </div>
-                            </form>
-                        </div>
+<!--                             </form>
+ -->                        </div>
 
                     </div>
 
