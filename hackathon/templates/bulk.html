@@ -57,8 +57,7 @@
                         </li>
                         <li class="menu-fs menu-underline"><a href="/bulk" class="pagescroll">Images in bulk</a>
                         </li>
-                        <li class="menu-fs menu-underline"><a href="/single" class="pagescroll">Single Images</a>
-                        </li>
+
                         <li class="menu-fs menu-underline"><a href="/video" class="pagescroll"> Videos </a>
                     </ul>
                 </div>
@@ -85,7 +84,7 @@
 
                     <div class="col-md-5 col-sm-6">
                         <div class="contact-div header-contact-form header-contact-bg">
-                            <form class="contact-form" action="/single" method="POST">{% csrf_token %}
+                            <form action="/bulk" enctype= "multipart/form-data" method="POST">{% csrf_token %}
                                 <div class="clearfix">
                                     <div class="header-form-heading-bg">
                                         <h4 class="center">UPLOAD IMAGES IN BULK</h4>
